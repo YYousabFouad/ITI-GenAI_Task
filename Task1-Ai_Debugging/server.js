@@ -1,15 +1,36 @@
 const express = require("express");
 const app = express();
 
-// Bug 1: Missing middleware
+/* ===========================================================
+   BUG 1: Missing JSON Middleware
+   -----------------------------------------------------------
+   Problem:
+   req.body is undefined because Express cannot parse JSON
+   requests without express.json() middleware.
+=========================================================== */
+
+// ===== Original Code =====
+// (No middleware was added)
+
+// ===== Fix =====
+app.use(express.json());
+
+/* ===========================================================
+   POST /api/users
+=========================================================== */
+
 app.post("/api/users", (req, res) => {
   const { name, email } = req.body;
 
-  if (!name || !email) return res.status(400).send("Missing fields");
+  if (!name || !email) {
+    return res.status(400).send("Missing fields");
+  }
 
-  res.status(201).json({ name, email });
+  res.status(201).json({
+    name,
+    email,
+  });
 });
-
 // Bug 2: Wrong HTTP method
 app.post("/api/users/:id", (req, res) => {
   res.json({
