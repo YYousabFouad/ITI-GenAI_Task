@@ -1,47 +1,49 @@
-const products = require("../models/productModel");
+const Product = require("../models/Product");
 
-// Get All Products
+// GET /products
 const getProducts = async (req, res) => {
   try {
+    const products = await Product.find();
+
     res.status(200).json(products);
   } catch (error) {
     res.status(500).json({
-      message: "Internal Server Error",
+      message: "Failed to retrieve products",
+      error: error.message,
     });
   }
 };
 
-// Add Product
-const addProduct = async (req, res) => {
+// POST /products
+const createProduct = async (req, res) => {
   try {
     const { name, price } = req.body;
 
+    // Input Validation
     if (!name || price === undefined) {
       return res.status(400).json({
         message: "Name and price are required",
       });
     }
 
-    const product = {
-      id: products.length + 1,
+    const product = await Product.create({
       name,
       price,
-    };
-
-    products.push(product);
+    });
 
     res.status(201).json({
-      message: "Product added successfully",
+      message: "Product created successfully",
       product,
     });
   } catch (error) {
     res.status(500).json({
-      message: "Internal Server Error",
+      message: "Failed to create product",
+      error: error.message,
     });
   }
 };
 
 module.exports = {
   getProducts,
-  addProduct,
+  createProduct,
 };
