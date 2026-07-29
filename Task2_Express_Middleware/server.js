@@ -68,6 +68,19 @@ const validationMiddleware = (req, res, next) => {
 };
 
 /* ==========================================================
+   Test Route
+========================================================== */
+
+app.post("/api/users", authMiddleware, validationMiddleware, (req, res) => {
+  res.status(201).json({
+    message: "User created successfully",
+    user: req.body,
+  });
+});
+
+app.get("/", (req, res) => {
+  res.send("Middleware Assignment Running");
+}); /* ==========================================================
    Apply Logger Globally
 ========================================================== */
 
