@@ -31,9 +31,26 @@ app.post("/api/users", (req, res) => {
     email,
   });
 });
-// Bug 2: Wrong HTTP method
-app.post("/api/users/:id", (req, res) => {
-  res.json({
+/* ===========================================================
+   BUG 2: Wrong HTTP Method
+   -----------------------------------------------------------
+   Problem:
+   Retrieving a resource should use GET instead of POST.
+=========================================================== */
+
+// ===== Original Code =====
+//
+// app.post("/api/users/:id", (req, res) => {
+//     res.json({
+//         id: req.params.id,
+//         name: "Ahmed"
+//     });
+// });
+
+// ===== Fix =====
+
+app.get("/api/users/:id", (req, res) => {
+  res.status(200).json({
     id: req.params.id,
     name: "Ahmed",
   });
