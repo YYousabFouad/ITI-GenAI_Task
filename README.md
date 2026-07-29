@@ -172,11 +172,6 @@ By completing these assignments, I gained practical experience in:
 
 ---
 
-# 📄 License
-
-This repository was created for educational purposes as part of the **Backend Node.js + Generative AI** course.
-
----
 
 # 👨‍💻 Author
 
