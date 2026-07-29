@@ -48,6 +48,26 @@ const authMiddleware = (req, res, next) => {
 };
 
 /* ==========================================================
+   Middleware 3: Input Validation
+
+   Purpose:
+   Ensures the request body contains
+   both name and email.
+========================================================== */
+
+const validationMiddleware = (req, res, next) => {
+  const { name, email } = req.body;
+
+  if (!name || !email) {
+    return res.status(400).json({
+      message: "Name and Email are required",
+    });
+  }
+
+  next();
+};
+
+/* ==========================================================
    Apply Logger Globally
 ========================================================== */
 
