@@ -56,13 +56,29 @@ app.get("/api/users/:id", (req, res) => {
   });
 });
 
-// Bug 3: Incorrect status code
+/* ===========================================================
+   BUG 3: Incorrect DELETE Response
+   -----------------------------------------------------------
+   Problem:
+   DELETE endpoint returned "Created successfully"
+   which is misleading.
+=========================================================== */
+
+// ===== Original Code =====
+//
+// app.delete("/api/users/:id", (req, res) => {
+//     res.status(200).json({
+//         message: "Created successfully"
+//     });
+// });
+
+// ===== Fix =====
+
 app.delete("/api/users/:id", (req, res) => {
   res.status(200).json({
-    message: "Created successfully",
+    message: "Deleted successfully",
   });
 });
-
 /* ===========================================================
    BUG 4: Invalid Port
    -----------------------------------------------------------
