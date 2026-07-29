@@ -25,5 +25,21 @@ app.delete("/api/users/:id", (req, res) => {
   });
 });
 
-// Bug 4: Port issue
-app.listen("three thousand", () => console.log("Running"));
+/* ===========================================================
+   BUG 4: Invalid Port
+   -----------------------------------------------------------
+   Problem:
+   app.listen() requires a numeric port.
+=========================================================== */
+
+// ===== Original Code =====
+//
+// app.listen("three thousand", () => {
+//     console.log("Running");
+// });
+
+// ===== Fix =====
+
+app.listen(3000, () => {
+  console.log("Server is running on http://localhost:3000");
+});
