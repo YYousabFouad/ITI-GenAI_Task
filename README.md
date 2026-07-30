@@ -1,182 +1,142 @@
-# 🚀 AI-Powered Backend Development Assignments
+# 🚀 AI-Powered Backend Development Assignments & Deliverables
 
-This repository contains three backend assignments completed as part of the **Backend Node.js + Generative AI** course.
+This repository contains technical assignments and deliverables completed as part of the **Backend Node.js + Generative AI Track** at the **Information Technology Institute (ITI)**.
 
-The assignments demonstrate how Artificial Intelligence can be integrated into the software development workflow to improve debugging, middleware development, code review, and project refactoring.
+The project demonstrates how Artificial Intelligence can be integrated into the software development lifecycle to improve debugging, middleware development, architectural refactoring, framework evaluations, RAG pipelines, and semantic caching systems.
 
 ---
 
-# 📂 Repository Structure
+## 📑 Repository Structure
 
-```
+```bash
 AI-Powered-Backend-Assignments/
 │
-├── Task1_AI_Debugging/
-│   ├── server.js
-│   ├── README.md
-│   ├── prompts.md
-│   ├── AI_Response.md
-│   ├── comparison.md
-│   ├── reflection.md
-│   ├── errors.md
-│   └── package.json
+├── Day1_AI_Assisted_Backend/
+│   ├── Task1_AI_Debugging/
+│   │   ├── server.js
+│   │   ├── README.md
+│   │   ├── prompts.md
+│   │   ├── AI_Response.md
+│   │   ├── comparison.md
+│   │   ├── reflection.md
+│   │   ├── errors.md
+│   │   └── package.json
+│   │
+│   ├── Task2_Express_Middleware/
+│   │   ├── server.js
+│   │   ├── README.md
+│   │   ├── prompts.md
+│   │   ├── AI_Response.md
+│   │   ├── comparison.md
+│   │   ├── reflection.md
+│   │   ├── code_review.md
+│   │   └── package.json
+│   │
+│   └── Task3_Code_Review_Refactoring/
+│       ├── config/
+│       ├── controllers/
+│       ├── models/
+│       ├── routes/
+│       ├── server.js
+│       ├── README.md
+│       ├── prompts.md
+│       ├── AI_Response.md
+│       ├── issues.md
+│       ├── comparison.md
+│       ├── code_review.md
+│       ├── reflection.md
+│       ├── .env.example
+│       └── package.json
 │
-├── Task2_Express_Middleware/
-│   ├── server.js
-│   ├── README.md
-│   ├── prompts.md
-│   ├── AI_Response.md
-│   ├── comparison.md
-│   ├── reflection.md
-│   ├── code_review.md
-│   └── package.json
+├── Day2_GenAI_RAG_SemanticCache/
+│   ├── src/
+│   │   ├── services/
+│   │   │   └── ragService.ts         # LangChain.js + Pinecone RAG Pipeline
+│   │   └── cache/
+│   │       └── semanticCache.ts       # Redis-based Semantic Caching System
+│   ├── docs/
+│   │   └── generative_ai_iti_solution.pdf # Comprehensive Architecture & Evaluation Report
+│   ├── README.md                      # Day 2 specific documentation
+│   ├── package.json                   # TypeScript & AI package configs
+│   └── .env.example                   # Environment variables template
 │
-├── Task3_Code_Review_Refactoring/
-│   ├── config/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   ├── server.js
-│   ├── README.md
-│   ├── prompts.md
-│   ├── AI_Response.md
-│   ├── issues.md
-│   ├── comparison.md
-│   ├── code_review.md
-│   ├── reflection.md
-│   ├── .env.example
-│   └── package.json
-│
-└── README.md
+└── README.md                          # Main repository overview
 ```
 
 ---
 
-# 📖 Task 1 – AI-Assisted Debugging
+## 📅 Course Modules & Tasks
 
-## Objective
+### 📍 Day 1: AI-Assisted Backend Development
 
-Debug a legacy Express.js application with the assistance of AI.
+#### 🐛 Task 1 – AI-Assisted Debugging
 
-### Features
+- **Objective:** Debug and fix legacy Express.js applications with AI assistance.
+- **Key Achievements:** Fixed routes, missing middleware, incorrect HTTP verbs, and standardized API responses while comparing manual vs. AI-assisted debugging workflows.
 
-- Fixed multiple bugs in an existing Express application.
-- Added missing Express middleware.
-- Corrected incorrect HTTP methods.
-- Improved API responses.
-- Documented AI prompts and responses.
-- Compared manual debugging with AI-assisted debugging.
+#### 🛠️ Task 2 – AI-Assisted Middleware Development
 
-### Skills Learned
+- **Objective:** Design reusable Express middlewares using prompt engineering.
+- **Key Achievements:** Created custom Logger, API Key Auth, and Request Validation middlewares with AI code review and optimization.
 
-- Express.js Fundamentals
-- Debugging Techniques
-- REST API Basics
-- Prompt Engineering
-- AI-Assisted Development
+#### 🔄 Task 3 – AI-Powered Code Review & Refactoring
+
+- **Objective:** Refactor a legacy monolithic Express + MongoDB application.
+- **Key Achievements:** Transitioned code to clean MVC Architecture, introduced Mongoose schemas, added robust async error handling, and generated structural technical docs.
 
 ---
 
-# 🛠️ Task 2 – AI-Assisted Middleware Development
+### 📍 Day 2: Advanced Generative AI, RAG & Semantic Caching
 
-## Objective
+#### ⚖️ Task 1 – Framework Evaluation (LangChain.js vs. LlamaIndex.TS)
 
-Design and implement reusable Express middleware using AI assistance.
+- **Objective:** Conduct a comparative study on Node.js/TypeScript AI frameworks for production RAG pipelines.
+- **Key Achievements:** Evaluated integration complexity, vector database flexibility (Pinecone/ChromaDB), memory persistence (Redis/MongoDB), and selection criteria.
 
-### Features
+#### 🔍 Task 2 – End-to-End RAG Pipeline (`ragService.ts`)
 
-- Logger Middleware
-- API Key Authentication Middleware
-- Request Validation Middleware
-- AI-generated middleware improvements
-- Documentation and comparison
+- **Objective:** Build a context-aware Retrieval-Augmented Generation system.
+- **Key Achievements:**
+  - Integrated **Pinecone** vector database with **OpenAI** (`text-embedding-3-small` & `gpt-4o`).
+  - Utilized **LangChain Expression Language (LCEL)** for declarative chain execution.
+  - Formatted strict system prompts to eliminate hallucination.
 
-### Skills Learned
+#### ⚡ Task 3 – Semantic Caching System (`semanticCache.ts`)
 
-- Express Middleware
-- Authentication
-- Request Validation
-- Logging
-- Software Documentation
-
----
-
-# 🔄 Task 3 – AI-Powered Code Review & Refactoring
-
-## Objective
-
-Refactor a legacy Express + MongoDB CRUD application using AI.
-
-### Features
-
-- MVC Architecture
-- MongoDB Integration
-- Mongoose Models
-- Async/Await
-- Error Handling
-- Input Validation
-- AI Code Review
-- Project Refactoring
-- Technical Documentation
-
-### Skills Learned
-
-- MVC Pattern
-- MongoDB
-- Mongoose
-- Async Programming
-- Code Refactoring
-- AI Code Review
+- **Objective:** Optimize LLM cost and latency using vector search in Redis.
+- **Key Achievements:**
+  - Implemented Cosine Similarity ($\ge 92\%$) over query embeddings stored in Redis.
+  - Reduced repetitive query latency from $\sim 2000	ext{ms}$ to $< 10	ext{ms}$.
+  - Decreased OpenAI API token expenses by $40-60\%$.
 
 ---
 
-# 💻 Technologies Used
+## 💻 Technologies & Libraries Used
 
-- Node.js
-- Express.js
-- MongoDB
-- Mongoose
-- dotenv
-- Git
-- GitHub
-
----
-
-# 🤖 AI Usage
-
-Artificial Intelligence was used throughout these assignments to:
-
-- Debug existing applications.
-- Analyze legacy code.
-- Suggest architectural improvements.
-- Refactor code into the MVC pattern.
-- Improve maintainability.
-- Generate technical documentation.
-- Assist with middleware implementation.
-
-All AI-generated suggestions were carefully reviewed, tested, and validated before being integrated into the final implementation.
+| Ecosystem               | Tools & Technologies                                                                          |
+| :---------------------- | :-------------------------------------------------------------------------------------------- |
+| **Backend & Runtime**   | Node.js, Express.js, TypeScript                                                               |
+| **Databases & Caching** | MongoDB, Mongoose, Redis, Pinecone Vector DB                                                  |
+| **AI & LLM Frameworks** | OpenAI API (GPT-4o), LangChain.js (`@langchain/openai`, `@langchain/pinecone`), LlamaIndex.TS |
+| **Utilities & Tooling** | `dotenv`, Git, GitHub, WeasyPrint (Technical PDF Generation)                                  |
 
 ---
 
-# 📚 Learning Outcomes
+## 🤖 AI Integration & Best Practices
 
-By completing these assignments, I gained practical experience in:
+Throughout both days, Artificial Intelligence (ChatGPT / Claude / Gemini) was leveraged to:
 
-- Building RESTful APIs with Express.js.
-- Debugging and improving legacy code.
-- Creating reusable middleware.
-- Working with MongoDB using Mongoose.
-- Applying the MVC architecture.
-- Implementing async/await and proper error handling.
-- Using AI responsibly as a software development assistant.
+- Accelerate legacy code debugging and error resolution.
+- Enforce MVC patterns and code modularization.
+- Generate complex TypeScript code for RAG chains and vector mathematical calculations.
+- Produce technical documentation, architecture evaluation matrices, and Markdown reports.
+
+> **Note:** All AI-generated suggestions were thoroughly audited, refactored, and tested for performance, security, and type safety before being committed.
 
 ---
 
+## 👨‍💻 Author
 
-# 👨‍💻 Author
-
-**Yosab Fouad**
-
-Computer Science Student
-
-Backend Node.js Trainee
+**Yosab Fouad**  
+_Computer Science Student | Backend Node.js Trainee_  
+_Information Technology Institute (ITI)_ [cite: 12]
