@@ -139,4 +139,4 @@ Throughout both days, Artificial Intelligence (ChatGPT / Claude / Gemini) was le
 
 **Yosab Fouad**  
 _Computer Science Student | Backend Node.js Trainee_  
-_Information Technology Institute (ITI)_ [cite: 12]
+\_Information Technology Institute (ITI)
