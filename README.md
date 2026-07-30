@@ -8,60 +8,74 @@ The project demonstrates how Artificial Intelligence can be integrated into the 
 
 ## 📑 Repository Structure
 
+````bash
+# 🚀 AI-Powered Backend Development Assignments & Deliverables
+
+This repository contains technical assignments and deliverables completed as part of the **Backend Node.js + Generative AI Track** at the **Information Technology Institute (ITI)**.
+
+The project demonstrates how Artificial Intelligence can be integrated into the software development lifecycle to improve debugging, middleware development, architectural refactoring, framework evaluations, RAG pipelines, and semantic caching systems.
+
+---
+
+## 📑 Repository Structure
+
 ```bash
-AI-Powered-Backend-Assignments/
+ITI/
 │
-├── Day1_AI_Assisted_Backend/
-│   ├── Task1_AI_Debugging/
-│   │   ├── server.js
-│   │   ├── README.md
-│   │   ├── prompts.md
+├── Day1/
+│   ├── Task1-Ai_Debugging/
+│   │   ├── IMAGES/
+│   │   ├── node_modules/
+│   │   ├── .gitignore
 │   │   ├── AI_Response.md
 │   │   ├── comparison.md
-│   │   ├── reflection.md
 │   │   ├── errors.md
-│   │   └── package.json
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── prompts.md
+│   │   ├── README.md
+│   │   └── server.js
 │   │
 │   ├── Task2_Express_Middleware/
-│   │   ├── server.js
-│   │   ├── README.md
-│   │   ├── prompts.md
+│   │   ├── Images/
+│   │   ├── node_modules/
+│   │   ├── .gitignore
 │   │   ├── AI_Response.md
-│   │   ├── comparison.md
-│   │   ├── reflection.md
 │   │   ├── code_review.md
-│   │   └── package.json
+│   │   ├── comparison.md
+│   │   ├── package-lock.json
+│   │   ├── package.json
+│   │   ├── prompts.md
+│   │   ├── README.md
+│   │   └── server.js
 │   │
 │   └── Task3_Code_Review_Refactoring/
 │       ├── config/
+│       │   └── db.js
 │       ├── controllers/
+│       ├── IMAGES/
 │       ├── models/
+│       ├── node_modules/
 │       ├── routes/
-│       ├── server.js
-│       ├── README.md
-│       ├── prompts.md
+│       ├── .env
+│       ├── .gitignore
 │       ├── AI_Response.md
-│       ├── issues.md
-│       ├── comparison.md
 │       ├── code_review.md
-│       ├── reflection.md
-│       ├── .env.example
-│       └── package.json
+│       ├── comparison.md
+│       ├── issues.md
+│       ├── package-lock.json
+│       ├── package.json
+│       ├── prompts.md
+│       ├── README.md
+│       └── server.js
 │
-├── Day2_GenAI_RAG_SemanticCache/
-│   ├── src/
-│   │   ├── services/
-│   │   │   └── ragService.ts         # LangChain.js + Pinecone RAG Pipeline
-│   │   └── cache/
-│   │       └── semanticCache.ts       # Redis-based Semantic Caching System
-│   ├── docs/
-│   │   └── generative_ai_iti_solution.pdf # Comprehensive Architecture & Evaluation Report
+├── Day2/
 │   ├── README.md                      # Day 2 specific documentation
-│   ├── package.json                   # TypeScript & AI package configs
-│   └── .env.example                   # Environment variables template
+│   ├── generative_ai_iti_Day2.pdf     # Architecture & Evaluation PDF Deliverable
+│   ├── ragPipeline.ts                 # LangChain.js + Pinecone RAG Pipeline Implementation
+│   └── semanticCache.ts               # Redis-based Semantic Caching System
 │
-└── README.md                          # Main repository overview
-```
+└── README.md                          # Main repository overview```
 
 ---
 
@@ -137,6 +151,7 @@ Throughout both days, Artificial Intelligence (ChatGPT / Claude / Gemini) was le
 
 ## 👨‍💻 Author
 
-**Yosab Fouad**  
-_Computer Science Student | Backend Node.js Trainee_  
+**Yosab Fouad**
+_Computer Science Student | Backend Node.js Trainee_
 \_Information Technology Institute (ITI)
+````
